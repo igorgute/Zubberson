@@ -1,0 +1,118 @@
+===== ZUBERSON - LOG DE DESENVOLVIMENTO =====
+
+[FASE 1 - BACKEND]
+
+* Estrutura inicial criada com FastAPI
+
+* Organização em módulos (routes, models, schemas, utils)
+
+* Configuração do SQLAlchemy
+
+* Criação das entidades:
+
+  * User
+  * Driver
+  * Vehicle
+  * Ride
+
+* Implementação de autenticação:
+
+  * Hash de senha com Passlib
+  * JWT (token de acesso)
+  * Funções de encode/decode
+
+* Criação das rotas:
+
+  * /auth/register
+  * /auth/login
+  * /auth/me
+  * /drivers
+  * /vehicles
+  * /rides
+
+* Implementação de regras de negócio:
+
+  * Passageiro cria corrida
+  * Motorista aceita corrida
+  * Motorista finaliza corrida
+
+* Implementação de controle de acesso:
+
+  * Dependências com FastAPI
+  * Restrição por tipo de usuário (motorista/passageiro)
+
+* Correções realizadas:
+
+  * Problema com import de módulos (app vs backend.app)
+  * Falta de dependência email-validator
+  * Erro de compatibilidade bcrypt
+  * Problema de conexão com PostgreSQL (migração para SQLite)
+  * Ajustes em nomes de arquivos (driver vs drivers, ride vs rides)
+  * Configuração de CORS
+
+---
+
+[FASE 2 - FRONTEND]
+
+* Inicialização do projeto com React + Vite
+
+* Instalação de dependências:
+
+  * react-router-dom
+  * axios
+
+* Criação da estrutura:
+
+  * components
+  * pages
+  * context
+  * services
+  * routes
+  * styles
+
+* Implementação de autenticação:
+
+  * AuthContext
+  * Persistência de token (localStorage)
+  * Interceptor Axios com Bearer Token
+  * ProtectedRoute
+
+* Criação de telas:
+
+  * Login
+  * Register
+  * Dashboard
+
+* Integração com backend:
+
+  * Login via OAuth2 (form-data)
+  * Register via JSON
+  * /auth/me para recuperar usuário
+
+* Correções realizadas:
+
+  * Erro de conexão com backend (server não rodando)
+  * Ajuste de CORS no FastAPI
+  * Ajuste de fluxo OAuth2PasswordRequestForm
+
+---
+
+[STATUS ATUAL]
+
+* Backend 100% funcional
+* Autenticação completa (JWT)
+* Frontend integrado com API
+* Dashboard inicial implementado
+
+---
+
+[PRÓXIMOS PASSOS]
+
+* Dashboard avançado
+* Fluxo completo de corridas no frontend
+* Interface de motorista
+* Interface de passageiro
+* Integração em tempo real
+* Versão mobile (Expo)
+
+=================================================
