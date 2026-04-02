@@ -180,7 +180,7 @@ frontend/
 
 ---
 
-## 🧪 Testes
+## Testes
 
 O backend pode ser testado via Swagger:
 
