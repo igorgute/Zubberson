@@ -94,6 +94,7 @@ Na raiz do projeto, execute:
 ```bash
 docker compose up --build
 
+
 ### Backend
 
 ```bash
