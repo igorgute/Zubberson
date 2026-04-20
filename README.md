@@ -1,5 +1,3 @@
-# Zubberson
-
 #  Zuberson
 
 Plataforma fullstack de mobilidade inspirada em aplicações como Uber, desenvolvida com foco em arquitetura moderna, autenticação segura e separação clara entre backend e frontend.
@@ -89,6 +87,13 @@ frontend/  → Interface web (React + Vite)
 
 ## ▶ Como executar
 
+## Executando com Docker
+
+Na raiz do projeto, execute:
+
+```bash
+docker compose up --build
+
 ### Backend
 
 ```bash
@@ -105,7 +110,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-### Frontend
+### 💻 Frontend
 
 ```bash
 cd frontend
@@ -178,15 +183,6 @@ frontend/
 * [ ] Sistema de pagamento
 * [ ] Versão mobile (Expo)
 
----
-
-## Testes
-
-O backend pode ser testado via Swagger:
-
-```text
-http://127.0.0.1:8000/docs
-```
 
 ---
 
