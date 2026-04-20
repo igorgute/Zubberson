@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: zuberson_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./backend/test.db:/app/test.db
+    environment:
+      SECRET_KEY: sua_chave_super_secreta
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 60
+      DATABASE_URL: sqlite:///./test.db
+
+  frontend:
+    build: ./frontend
+    container_name: zuberson_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
